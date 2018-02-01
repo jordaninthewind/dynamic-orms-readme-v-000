@@ -10,7 +10,7 @@ class Song
 
   def self.column_names
     x = DB[:conn].results_as_hash = true
-    
+    binding.pry
     sql = "pragma table_info('#{table_name}')"
 
     table_info = DB[:conn].execute(sql)
@@ -59,6 +59,3 @@ class Song
   end
 
 end
-
-
-
